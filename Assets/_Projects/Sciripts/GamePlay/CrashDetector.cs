@@ -1,4 +1,4 @@
-
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CrashDetector : MonoBehaviour
@@ -16,9 +16,9 @@ public class CrashDetector : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-     if(collision.tag=="surface")
-    {
-        Debug.Log("Collided on surface");
-    }
+        if(collision.tag=="Player")
+        {
+            SceneManager.LoadScene("GamePlay");
+        }
     }
 }

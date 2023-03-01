@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289812108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.262224, y: 1.7799997, z: -10}
+  m_LocalPosition: {x: 2.3372755, y: 1.7799997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -539,7 +539,6 @@ GameObject:
   - component: {fileID: 1300449891}
   - component: {fileID: 1300449890}
   - component: {fileID: 1300449892}
-  - component: {fileID: 1300449893}
   m_Layer: 0
   m_Name: SnowBoy
   m_TagString: Player
@@ -631,18 +630,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationSpeed: 15
   _rigidBoy2D: {fileID: 1300449886}
---- !u!114 &1300449893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300449885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db699df269ebb7a4484cf86de393f552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1771464037
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +643,7 @@ GameObject:
   - component: {fileID: 1771464038}
   - component: {fileID: 1771464041}
   - component: {fileID: 1771464042}
+  - component: {fileID: 1771464043}
   m_Layer: 0
   m_Name: snowLevel
   m_TagString: surface
@@ -1327,6 +1315,18 @@ SurfaceEffector2D:
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
+--- !u!114 &1771464043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771464037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db699df269ebb7a4484cf86de393f552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946793409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946793409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.262224, y: 1.7799997, z: -10}
+  m_LocalPosition: {x: 2.3372755, y: 1.7799997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
