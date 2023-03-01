@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
-    [SerializeField] private float _delayToLoadScene=3; 
+    [SerializeField] private float _delayToLoadScene=3;
+    [SerializeField] private GameObject _particleSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class FinishLine : MonoBehaviour
     {
         if(collision.tag=="Player")
         {
+            StartParticleEffect();
             Invoke("ReLoadTheScene", _delayToLoadScene);
         }
     }
@@ -30,4 +32,6 @@ public class FinishLine : MonoBehaviour
     {
         SceneManager.LoadScene("GamePlay");
     }
+
+    private void StartParticleEffect() => _particleSystem.SetActive(true);
 }

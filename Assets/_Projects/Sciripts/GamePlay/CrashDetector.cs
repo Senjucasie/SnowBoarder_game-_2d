@@ -5,6 +5,7 @@ public class CrashDetector : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float _delayToLoadScene = 3;
+    [SerializeField] private GameObject _particleSystem;
     void Start()
     {
         
@@ -17,8 +18,9 @@ public class CrashDetector : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Player")
+        if(collision.tag=="surface")
         {
+            StartParticleEffect();
             Invoke("ReLoadTheScene", _delayToLoadScene);
         }   
     }
@@ -27,4 +29,7 @@ public class CrashDetector : MonoBehaviour
     {
         SceneManager.LoadScene("GamePlay");
     }
+
+    private void StartParticleEffect() => _particleSystem.SetActive(true);
 }
+
