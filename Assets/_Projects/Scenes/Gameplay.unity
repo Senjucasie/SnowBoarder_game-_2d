@@ -5456,7 +5456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db699df269ebb7a4484cf86de393f552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delayToLoadScene: 1
+  _delayToLoadScene: 0.6
   _particleSystem: {fileID: 1961661100}
 --- !u!1 &1771464037
 GameObject:
@@ -6313,7 +6313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39e01e54f2b1e44bb9103984dcc5ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delayToLoadScene: 1
+  _delayToLoadScene: 0.6
   _particleSystem: {fileID: 145585582}
 --- !u!61 &1949591890
 BoxCollider2D:
