@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
+    [SerializeField] private float _delayToLoadScene=3; 
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,12 @@ public class FinishLine : MonoBehaviour
     {
         if(collision.tag=="Player")
         {
-            SceneManager.LoadScene("GamePlay");
+            Invoke("ReLoadTheScene", _delayToLoadScene);
         }
+    }
+
+    private void ReLoadTheScene()
+    {
+        SceneManager.LoadScene("GamePlay");
     }
 }
