@@ -10,7 +10,9 @@ namespace SnowBoarder.Player
         [SerializeField] private float _rotationSpeed = 1;
         [SerializeField] private Rigidbody2D _rigidBoy2D;
 
-        void Update()
+      
+
+        void FixedUpdate()
         {
             if (Input.GetKey(KeyCode.LeftArrow))
                 _rigidBoy2D.AddTorque(_rotationSpeed);
