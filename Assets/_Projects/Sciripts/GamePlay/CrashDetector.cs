@@ -6,6 +6,7 @@ public class CrashDetector : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private float _delayToLoadScene = 3;
     [SerializeField] private GameObject _particleSystem;
+    [SerializeField] private AudioHandler _audioHandler;
     void Start()
     {
         
@@ -20,6 +21,7 @@ public class CrashDetector : MonoBehaviour
     {
         if(collision.tag=="surface")
         {
+            _audioHandler.PlayCrashSound();
             StartParticleEffect();
             Invoke("ReLoadTheScene", _delayToLoadScene);
         }   

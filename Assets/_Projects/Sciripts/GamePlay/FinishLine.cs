@@ -8,6 +8,7 @@ public class FinishLine : MonoBehaviour
     [SerializeField] private float _delayToLoadScene=3;
     [SerializeField] private GameObject _particleSystem;
     // Start is called before the first frame update
+    [SerializeField] private AudioHandler _audioHandler;
     void Start()
     {
         
@@ -23,6 +24,7 @@ public class FinishLine : MonoBehaviour
     {
         if(collision.tag=="Player")
         {
+            _audioHandler.PlayFinishSound();
             StartParticleEffect();
             Invoke("ReLoadTheScene", _delayToLoadScene);
         }
