@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using GampePlay.Events;
 
 public class CrashDetector : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class CrashDetector : MonoBehaviour
     {
         if(collision.tag=="surface")
         {
+            GamePlayEventBroker.CallGameOver();
             _audioHandler.PlayCrashSound();
             StartParticleEffect();
             Invoke("ReLoadTheScene", _delayToLoadScene);
