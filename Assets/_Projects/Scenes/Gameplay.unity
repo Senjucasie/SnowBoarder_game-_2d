@@ -6468,7 +6468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db699df269ebb7a4484cf86de393f552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delayToLoadScene: 5
+  _delayToLoadScene: 0.6
   _particleSystem: {fileID: 1961661100}
   _audioHandler: {fileID: 1473473836}
 --- !u!114 &1300449894
